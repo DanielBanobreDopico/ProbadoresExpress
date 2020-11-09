@@ -1,0 +1,33 @@
+{% extends "main.html" %}
+
+{% block seccion %}
+
+    <h2>Catálogo de productos</h2>
+
+    <label>Secciones:
+        <select name="seccion" form="menu">
+            {% for seccion in catalogo %}
+            <option {% if seccionActual === loop.index0 %} selected {% endif %} value="{{loop.index0}}">{{seccion.nombre}}</option>
+            {% else %}
+            <li>No hay secciones.</li>
+            {% endfor %}
+        </select>
+    </label>
+
+    <form action="/catalogo/" method="GET" id="menu">
+        <input type="submit">
+    </form>
+
+    <h3>Sección {{catalogo[seccionActual].nombre}}</h3>
+    <ul>
+        {% for producto in catalogo[seccionActual].articulos %}
+        <li>{{ producto.nombre }}
+            <p>{{ producto.descripcion }}</p>
+            <p><em>{{ producto.precio }}€</em></p>
+        </li>
+        {% else %}
+        <li>Seleccione una sección.</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

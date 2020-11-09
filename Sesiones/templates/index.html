@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+
+{% block seccion %}
+
+    <h2>Inicio</h2>
+
+    <p>Prueba de sesiones de usuario con autenticación y control de acceso básicos.</p>
+    <p>Esta web disponde de esta página y una página <a href='/privado/'>/privado/</a></p>
+    <p>Existe una cuenta de usuario con nombre "usuario" y contraseña "1234".</p>
+    <p>Sólo se podrá acceder a secreto tras haber iniciado sesión.</p>
+    
+    <h3>Ejemplos:</h3>
+    <ul>
+        <a href="/listado/"><li>Listado a partir de array</li></a>
+        <a href="/catalogo/"><li>Catalogo a partir objeto</li></a>
+        <a href="/notas/"><li>Notas con form y POST</li></a>
+    </ul>
+
+{% endblock %}
