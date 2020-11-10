@@ -29,7 +29,7 @@ app.use(session(sessionOptions));
  * Normalmente esta información estará en una base de datos o algún servicio de autenticación.
  */
 const users = {
-    "usuario": "1234",
+    "frida": "1234",
     "toño": "abcd",
 }
 
