@@ -17,6 +17,8 @@ const appPort = 3000;
 const secret = "s4VbV3z4hjlTApzzQYalJRpPUBbacSUFZ3sTZ4MS7aqa"
 const sessionOptions = {
     secret: secret,
+    resave: true,
+    saveUninitialized: false,
     cookie: {},
 }
 
